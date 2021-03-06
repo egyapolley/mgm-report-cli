@@ -10,7 +10,7 @@ const fs =require("fs");
 const ftpClient = require('ftp');
 const { parse } = require('json2csv');
 
-const outputFile = path.join(__dirname, "files_dir",`report-${moment().format("DD-MM-YYYY")}.txt`);
+const outputFile = path.join(__dirname, "files_dir",`mgm-report-${moment().format("DD-MM-YYYY")}.txt`);
 const remoteFile = `/BIapp/source/IN_FILES/IN_MSISDN_STATE/DOWNLOADED/mgm-report-${moment().format("DD-MM-YYYY")}.txt`
 sequelize.sync({logging:false})
     .then(async () =>{
